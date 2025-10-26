@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Registration Form</title>
+    <link rel="icon" type="image/icon" href="img/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app">
+        <h2>EAST JUNCTION MEMBER RECORD</h2>
+
+        <div id="user-selection">
+            <label for="username"></label>
+            <input type="text" id="username" hidden=""> <br><br>
+            <button onclick="switchUser()">Load User</button>
+            <button onclick="newUser()">New User</button>
+        </div>
+
+
+        <div id="finance-dashboard" style="display: none;">
+            <h3>Welcome, <span id="current-user"></span>!</h3>
+            <h4>Add Transaction</h4>
+            <form id="transaction-form">
+                <div>
+                    <label for="text">
+                        <select id="text">
+                            <optgroup label="text ">
+                                <option value="Recieved Amount ">Recieved Amount </option>
+                                <option value="M.G.R">M.G.R</option>
+                                <option value="T.banking">T.banking</option>
+                                <option value="Welfare">Welfare</option>
+                                <option value="G.Fund">G.Fund</option>
+                                <option value="Fines">Fines</option>
+                                <option value="N.loan Tkn">N.loan Tkn</option>
+                                <option value="Item loan Tkn">Item loan Tkn</option>
+                                <option value="N.loan Rtrn">N.loan Rtrn</option>
+                                <option value="Item loan Rtrn">Item loan Rtrn</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" step="0.01" required>
+                </div>
+                <div>
+                    <label for="type">Type:</label>
+                    <select id="type">
+                        <option value="income">Recieved</option>
+                        <option value="expense">Deductions</option>
+
+                    </select>
+                </div>
+                <button type="submit">Add Transaction</button>
+            </form>
+
+            <h4>Transactions</h4>
+            <ul id="transaction-list">
+                <!-- Transactions will be loaded here -->
+            </ul>
+            <h4>Summary</h4>
+            <p>Total Recieved: Ksh <span id="total-income">0.00</span></p>
+            <p>Total Deductions: Ksh <span id="total-expenses">0.00</span></p>
+            <p>Savings: Ksh <span id="balance">0.00</span></p>
+        </div>
+    </div>
+
+   
+    <script src="script.js"></script>
+  
+</body>
+
+</html>

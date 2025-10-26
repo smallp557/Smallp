@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Registration Form</title>
+    <link rel="icon" type="image/icon" href="img/favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app">
+        <h2>EAST JUNCTION MEMBER RECORD</h2>
+
+        <div id="user-selection">
+            <label for="username"></label>
+            <input type="text" id="username" hidden=""> <br><br>
+            <button onclick="switchUser()">Load Member</button>
+            
+        </div>
+
+
+        <div id="finance-dashboard" style="display: none;">
+            <h3>Welcome, <span id="current-user"></span>!</h3>
+
+            <h4>Members Record</h4>
+            <ul id="transaction-list">
+                <!-- Transactions will be loaded here -->
+            </ul>
+
+            <h4>Summary</h4>
+            <p>Total Recieved: Ksh <span id="total-income">0.00</span></p>
+            <p>Total Deductions: Ksh <span id="total-expenses">0.00</span></p>
+            <p>Savings: Ksh <span id="balance">0.00</span></p>
+        </div>
+    </div>
+    <!-- Script -->
+
+    <script src="smallp.js"></script>
+</body>
+
+</html>
